@@ -2,7 +2,7 @@ package telas;
 
 import dominio.Laboratorio;
 import dominio.Animal;
-
+import java.util.Scanner;
 
 public class Telas {
     
@@ -14,19 +14,15 @@ public class Telas {
 
     }
 
-    public void alimentando(boolean p){
-        
-        if (p){
-            System.out.println("");
-            System.out.println("Alimentando...");
-            System.out.println("");
-            System.out.println();
 
-        }else{
-            System.out.println("");
-            System.out.println("Usuário sem permissão! ");
-            System.out.println("");
-        }
+    public void alimentando(String msg){
+
+        System.out.println(msg);
+    }
+
+    public void telaAliment(){
+        System.out.print("ID animal: ");
+        Scanner s = new Scanner(System.in);
     }
 
 }

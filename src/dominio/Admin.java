@@ -18,7 +18,7 @@ public class Admin extends Usuario{
     }
 
     public void registraObito(Predador p){
-        p.setStatus(p, false);
+        p.setStatus(false);
     }    
 
 }

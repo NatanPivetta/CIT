@@ -7,7 +7,7 @@ import dominio.Predador;
 public class Laboratorio {
     private String nome;
     private double temperatura;
-    List<Object> animais = new ArrayList();
+    List<Animal> animais = new ArrayList<Animal>();
 
     public Laboratorio(String nome){
         this.nome = nome;
@@ -29,11 +29,7 @@ public class Laboratorio {
         animais.add(a);
     }
 
-    public void listaAnimais(){
-
-        for (Object animal : animais) {
-            System.out.println(animal);
-        }
-        
+    public List<Animal> getAnimais(){
+        return animais;
     }
 }

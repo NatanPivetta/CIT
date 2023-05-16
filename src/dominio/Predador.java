@@ -5,10 +5,9 @@ public class Predador extends Animal {
     private boolean peconha;
     private boolean status;
 
-    public Predador(int id, boolean p, boolean v){
-        this.id = id;
-        this.peconha = p;
-        this.status = v;
+    public Predador(boolean peconha){
+        this.peconha = peconha;
+        this.setStatus(true);
     }
 
     public int getId(Predador p){
@@ -23,7 +22,7 @@ public class Predador extends Animal {
         return status;
     }
 
-    public void setStatus(Predador p, boolean veOuF){
+    public void setStatus(boolean veOuF){
         this.status = veOuF;
     }
 }

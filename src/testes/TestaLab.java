@@ -13,9 +13,9 @@ public class TestaLab {
         lab3 = new Laboratorio("Aracno");
         Predador a1, a2;
 
-        a1 = new Predador(15, true, true);
+        a1 = new Predador(true);
         a1.setCat("Cobra");
-        a2 = new Predador(10, false, true);
+        a2 = new Predador(true);
         a2.setCat("Escorpião");
         lab1.addAnimal(a1);
         lab3.addAnimal(a2);
@@ -25,16 +25,16 @@ public class TestaLab {
         lab2 = new Laboratorio("Camundongos");
         Presa p1 = new Presa(10);
         p1.setCat("Rato");
-        p1.reproduzir(p1, 4);
-        p1.reproduzir(p1, 5);
+        p1.reproduzir(4);
+        p1.reproduzir(5);
         
         
         tela.lab(lab1);
-        lab1.listaAnimais();
+        lab1.getAnimais();
 
 
         tela.lab(lab3);
-        lab3.listaAnimais();
+        lab3.getAnimais();
     }
         
 }

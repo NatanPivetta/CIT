@@ -10,11 +10,14 @@ public class TestaUser {
         Admin adm = new Admin();
         Estagiario est = new Estagiario();
         Predador a1;
-        a1 = new Predador(20, true, true);
+        a1 = new Predador(true);
+        a1.setStatus(false);
         
-        boolean b = adm.alimentaAnimal("Rato", 2, a1);
+        String b = adm.alimentaAnimal("Rato", 2, a1);
         tela.alimentando(b);
         
+        b = est.alimentaAnimal("Rato", 3, a1);
+        tela.alimentando(b);
         
     }
 }

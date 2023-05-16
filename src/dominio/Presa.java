@@ -7,11 +7,11 @@ public class Presa extends Animal {
         this.quantidade = q;
     }
 
-    public void reproduzir(Presa p, int q){
+    public void reproduzir(int q){
         this.quantidade += q;
     }
 
-    public int getQuant(Presa p){
+    public int getQuant(){
         return this.quantidade;
     }
 

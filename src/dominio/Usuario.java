@@ -13,25 +13,31 @@ public abstract class Usuario {
 
     public abstract boolean temPermissao();
 
-    public boolean alimentaAnimal(String alimento, int q, Predador predador ){
-        LocalDate c = LocalDate.now();
+
+
+    public String alimentaAnimal(String alimento, int q, Predador predador ){
+        LocalDate calendar = LocalDate.now();
         boolean vivo = predador.getStatus();
         boolean peconha = predador.getPeconha();
         boolean permissao = this.temPermissao();
-        boolean efetivado = false;
+        String msg = "";
         if (vivo){
-            if(peconha){
-                if (permissao){
-                    efetivado = true;
-                    Registro r = new Registro(c, alimento, predador, q);
-                }
-                
-            }
             
+            if (peconha && permissao){
+                msg = "Alimentando...";
+                Registro r = new Registro(calendar, alimento, predador, q);
+            }else{
+                msg = "Sem permissão!";
+            }
+                
+            
+            
+        }else{
+            msg = "Animal não está vivo!";
         }
 
 
-        return efetivado;
+        return msg;
     }
 
     

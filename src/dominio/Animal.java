@@ -3,7 +3,7 @@ package dominio;
 public abstract class Animal {
     private String cat;
 
-    public String getCat(Animal animal){
+    public String getCat(){
         return this.cat;
     }
 
