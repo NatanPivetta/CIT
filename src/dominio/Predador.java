@@ -1,17 +1,24 @@
 package dominio;
 
+import dominio.Laboratorio;
+
 public class Predador extends Animal {
     private int id;
     private boolean peconha;
     private boolean status;
+    private String lab;
 
     public Predador(boolean peconha){
         this.peconha = peconha;
         this.setStatus(true);
     }
 
-    public int getId(Predador p){
+    public int getId(){
         return this.id;
+    }
+
+    public void setId(int id){
+        this.id = id;
     }
 
     public boolean getPeconha(){
@@ -25,4 +32,6 @@ public class Predador extends Animal {
     public void setStatus(boolean veOuF){
         this.status = veOuF;
     }
+
+    
 }

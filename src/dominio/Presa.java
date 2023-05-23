@@ -15,4 +15,12 @@ public class Presa extends Animal {
         return this.quantidade;
     }
 
+    public void setQuant(int q){
+        this.quantidade = q;
+    }
+
+    public void reduzir(int q){
+        this.quantidade = quantidade - q;
+    }
+
 }

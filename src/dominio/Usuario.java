@@ -1,45 +1,69 @@
 package dominio;
 import java.util.Calendar;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.ArrayList;
+
+
 
 import dominio.*;
 import telas.*;
-import dominio.Predador;
+
 public abstract class Usuario {
-    private String login;
-    private String senha;
-    private String email;
-    private String nome;
+    protected String login;
+    protected String senha;
+    protected String email;
+    protected String nome;
+    private List<Registro> registros = new ArrayList<Registro>();
 
     public abstract boolean temPermissao();
 
 
 
-    public String alimentaAnimal(String alimento, int q, Predador predador ){
+    public boolean alimentaAnimal(Presa alimento, int q, Predador predador ){
         LocalDate calendar = LocalDate.now();
         boolean vivo = predador.getStatus();
         boolean peconha = predador.getPeconha();
         boolean permissao = this.temPermissao();
-        String msg = "";
-        if (vivo){
-            
-            if (peconha && permissao){
-                msg = "Alimentando...";
-                Registro r = new Registro(calendar, alimento, predador, q);
-            }else{
-                msg = "Sem permissão!";
-            }
-                
-            
-            
+        boolean msg = false;
+        
+
+        if (!vivo){
+            msg = false;
+            // Animal não está vivo, tratar erro
+
         }else{
-            msg = "Animal não está vivo!";
+            if(peconha){
+                if(permissao){
+                    msg = true;
+                    alimento.reduzir(q);
+                    Registro reg = new Registro(this, calendar, alimento, predador, q);
+                    addReg(reg);
+                }else{
+                    msg = false;
+                }
+            }else{
+                msg = true;
+                alimento.reduzir(q);
+                Registro reg = new Registro(this, calendar, alimento, predador, q);
+                addReg(reg);
+
+            }
         }
-
-
         return msg;
     }
 
+
+    public void addReg(Registro reg){
+        registros.add(reg);
+    }
+
+    public Registro getRegistro(int id){
+        return registros.get(id);
+    }
     
+    public String getNome(){
+        return this.nome;
+    }
 
 }
