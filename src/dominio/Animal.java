@@ -14,6 +14,9 @@ public abstract class Animal {
     }
 
     protected void setLab(Laboratorio lab){
+            if(lab == null){
+                
+            }
             this.lab = lab;
     }
 

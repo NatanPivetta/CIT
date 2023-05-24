@@ -26,12 +26,11 @@ public class Laboratorio {
     }
 
     public void addAnimal(Animal a){
-        int posicao = 0;
         animais.add(a);
         a.setLab(this);
         if(a instanceof Predador ){
-            posicao = animais.size() -1;
-            a.setId(posicao);
+            
+            a.setId(Id.getId());
         }
 
         

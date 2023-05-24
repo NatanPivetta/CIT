@@ -17,6 +17,7 @@ public class TestaUser {
 
         p1 = new Presa(10);
         a1 = new Predador(true);
+        a1.setStatus(true);
         p1.setCat("Rato");
         a1.setCat("Serpente");
         

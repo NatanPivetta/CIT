@@ -12,7 +12,6 @@ public class Registro {
     private Predador predador;
     private Presa presa;
     private Usuario responsavel;
-    private List<Registro> registros = new ArrayList<Registro>();
 
     public Registro(Usuario resp, LocalDate data, Presa presa, Predador predador, int quantidade){
         this.data = data;
@@ -25,10 +24,6 @@ public class Registro {
 
     public LocalDate getData(){
         return this.data;
-    }
-
-    public void setResponsavel(Usuario resp){
-        this.responsavel = resp;
     }
 
     public Usuario getResponsavel(){

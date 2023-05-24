@@ -31,6 +31,7 @@ public abstract class Usuario {
         if (!vivo){
             msg = false;
             // Animal não está vivo, tratar erro
+            throw new RuntimeException("Animal não está vivo");
 
         }else{
             if(peconha){
@@ -41,6 +42,7 @@ public abstract class Usuario {
                     addReg(reg);
                 }else{
                     msg = false;
+                    throw new RuntimeException("Usuário sem Permissão");
                 }
             }else{
                 msg = true;
