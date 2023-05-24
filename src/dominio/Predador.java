@@ -8,9 +8,10 @@ public class Predador extends Animal {
     private boolean status;
     private String lab;
 
-    public Predador(boolean peconha){
+    public Predador(boolean peconha, String cat){
         this.peconha = peconha;
         this.setStatus(true);
+        this.setCat(cat);
     }
 
     public int getId(){

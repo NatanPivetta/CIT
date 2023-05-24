@@ -16,10 +16,9 @@ public class TestaUser {
         boolean b;
 
         p1 = new Presa(10);
-        a1 = new Predador(true);
+        a1 = new Predador(true, "Serpente");
         a1.setStatus(true);
         p1.setCat("Rato");
-        a1.setCat("Serpente");
         
         b = adm.alimentaAnimal(p1, 2, a1);
 
