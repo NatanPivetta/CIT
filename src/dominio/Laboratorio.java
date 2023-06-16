@@ -44,4 +44,8 @@ public class Laboratorio {
         return (Predador) animais.get(id);
     }
 
+    public Presa getPresa(int option){
+        return (Presa) animais.get(option);
+    }
+
 }

@@ -8,16 +8,16 @@ public class Predador extends Animal {
     private boolean status;
     private String lab;
 
-    public Predador(boolean peconha, String cat){
+    public Predador(boolean peconha){
         this.peconha = peconha;
         this.setStatus(true);
-        this.setCat(cat);
     }
 
     public int getId(){
         return this.id;
     }
 
+    @Override
     public void setId(int id){
         this.id = id;
     }
@@ -30,8 +30,8 @@ public class Predador extends Animal {
         return status;
     }
 
-    public void setStatus(boolean veOuF){
-        this.status = veOuF;
+    public void setStatus(boolean vivo){
+        this.status = vivo;
     }
 
     

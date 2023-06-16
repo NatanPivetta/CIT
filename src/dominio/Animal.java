@@ -4,6 +4,7 @@ public abstract class Animal {
     private String cat;
     private Laboratorio lab;
     private int id;
+    private int quantidade;
 
     public String getCat(){
         return this.cat;
@@ -26,6 +27,14 @@ public abstract class Animal {
 
     public void setId(int id){
         this.id = id;
+    }
+
+    public int getId(){
+        return this.id;
+    }
+
+    public int getQuant(){
+        return this.quantidade;
     }
 
 }

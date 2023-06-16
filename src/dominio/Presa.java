@@ -2,6 +2,11 @@ package dominio;
 
 public class Presa extends Animal {
     private int quantidade;
+
+    public Presa(int q, String cat){
+        this.quantidade = q;
+        this.setCat(cat);
+    }
     
     public Presa(int q){
         this.quantidade = q;
@@ -11,6 +16,7 @@ public class Presa extends Animal {
         this.quantidade += q;
     }
 
+    @Override
     public int getQuant(){
         return this.quantidade;
     }

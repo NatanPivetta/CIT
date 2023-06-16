@@ -6,12 +6,16 @@ import java.util.List;
 public class TestaLab {
     public static void main(String[] args) {
         Telas tela = new Telas();
-        Laboratorio lab1, lab2, lab3;
+        Laboratorio lab1, lab2, lab3, lab4;
         lab1 = new Laboratorio("Serpentes");
         lab2 = new Laboratorio("Aracno");
-        lab3 = new Laboratorio("Camundongos");
+        lab3 = new Laboratorio("Presas");
+        
 
         Predador a1, a2, a3, a4, a5, a6;
+        Presa p1, p2;
+        p1 = new Presa(10, "Ratos");
+        p2 = new Presa(1000, "Baratas");
 
         a1 = new Predador(false);
         a2 = new Predador(true);
@@ -35,18 +39,21 @@ public class TestaLab {
         lab1.addAnimal(a5);
         lab2.addAnimal(a6);
 
-        System.out.println(a1.getCat()+ ": " + "ID: " + a1.getId());
-        System.out.println(a2.getCat()+ ": " + "ID: " + a2.getId());
-        System.out.println(a3.getCat()+ ": " + "ID: " + a3.getId());
-        System.out.println(a4.getCat()+ ": " + "ID: " + a4.getId());
-        System.out.println(a5.getCat()+ ": " + "ID: " + a5.getId());
-        System.out.println(a6.getCat()+ ": " + "ID: " + a6.getId());
-
+        lab3.addAnimal(p1);
+        lab3.addAnimal(p2);
+        
         tela.lab(lab1);
+        
+
         tela.lab(lab2);
+        
+
         tela.lab(lab3);
+        
+        
 
         
+
         
     }
         

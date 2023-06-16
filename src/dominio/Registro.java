@@ -30,8 +30,12 @@ public class Registro {
         return this.responsavel;
     }
     
-    public String getPresa(){
+    public String getPresaCat(){
         return this.presa.getCat();
+    }
+
+    public int getPresa(){
+        return this.presa.getQuant();
     }
     
     public int getQuant(){
