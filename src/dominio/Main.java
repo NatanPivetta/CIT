@@ -30,6 +30,9 @@ public class Main {
         System.out.printf("%d %15s %10.2f\n", lab.getNome());
       }//for
     }//try
+    catch (SQLException e) {
+      e.printStackTrace();
+    }
 
     }
 
